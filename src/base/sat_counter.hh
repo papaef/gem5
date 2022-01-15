@@ -238,6 +238,18 @@ class GenericSatCounter
     }
 
     /**
+     * OR-assignment.
+     *
+     * @ingroup api_sat_counter
+     */
+    GenericSatCounter&
+    operator|=(const long long& value)
+    {
+        this->counter = this->counter | value;
+        return *this;
+    }
+
+    /**
      * Add-assignment.
      *
      * @ingroup api_sat_counter
